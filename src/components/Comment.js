@@ -1,11 +1,12 @@
 import React from "react";
 import "./comment.css";
-import commentsData from "../data.json";
 
-const Comment = () => {
-  console.log(commentsData);
 
-  const theComment = commentsData.comments.map((comment) => {
+
+const Comment = (props) => {
+  //console.log('data is',props.dataForComment);
+  console.log('is called in sumbmit')
+  const theComment = props.dataForComment.comments.map((comment) => {
     const avatar = `${comment.user.image.png}`.replace("./images/avatars/", "");
 
     return (
